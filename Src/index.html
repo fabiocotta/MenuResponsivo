@@ -7,7 +7,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Menu</h1>
-    
+    <nav>
+        <ul class="openMenu">
+            <li><a class="logotipo" href="#">Fc.Design</a></li>
+            <li class="hideMobile"><a href="#">Sobre</a></li>
+            <li class="hideMobile"><a href="#">Portfólio</a></li>
+            <li class="hideMobile"><a href="#">Serviços</a></li>
+            <li class="hideMobile"><a href="#">Blog</a></li>
+            <li class="hideMobile"><a href="#">Contato</a></li>
+            <li class="hideDesktop" onclick="showNav()"><a href="#">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                        width="24px" fill="#e8eaed">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        <ul class="closeMenu">
+            <li onclick="closeNav()"><a href="#">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                        width="24px" fill="#e8eaed">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </a>
+            </li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Portfólio</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Construindo experiência digital</h1>
+        <p>Sistemas, Websites, Aplicativos, identidade Visual e Digital Marketing</p>
+    </div>
+    <script>
+        function showNav(){
+            const sidebar = document.querySelector(".closeMenu");
+            sidebar.style.display = "flex";
+        }
+
+        function closeNav(){
+            const sidebar = document.querySelector(".closeMenu");
+            sidebar.style.display = "none";
+        }
+    </script>
 </body>
 </html>
